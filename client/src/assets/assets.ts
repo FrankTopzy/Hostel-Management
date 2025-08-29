@@ -37,6 +37,7 @@ import listIcon from "./listIcon.svg";
 import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
+import type { ExclusiveOfferType, FacilityIconType, HotelDummyDataType, RoomCommonDataType, RoomsDummyDataType, TestimonialType, UserBookingDummyDataType, UserDummyDataType } from '../components/types'
 
 
 export const assets = {
@@ -74,7 +75,7 @@ export const assets = {
     totalRevenueIcon,
 }
 
-export const cities = [
+export const cities: string[] = [
     "Dubai",
     "Singapore",
     "New York",
@@ -82,21 +83,21 @@ export const cities = [
 ];
 
 // Exclusive Offers Dummy Data
-export const exclusiveOffers = [
+export const exclusiveOffers: ExclusiveOfferType[] = [
     { _id: 1, title: "Summer Escape Package", description: "Enjoy a complimentary night and daily breakfast", priceOff: 25, expiryDate: "Aug 31", image: exclusiveOfferCardImg1 },
     { _id: 2, title: "Romantic Getaway", description: "Special couples package including spa treatment", priceOff: 20, expiryDate: "Sep 20", image: exclusiveOfferCardImg2 },
     { _id: 3, title: "Luxury Retreat", description: "Book 60 days in advance and save on your stay at any of our luxury properties worldwide.", priceOff: 30, expiryDate: "Sep 25", image: exclusiveOfferCardImg3 },
 ]
 
 // Testimonials Dummy Data
-export const testimonials = [
+export const testimonials: TestimonialType[] = [
     { id: 1, name: "Emma Rodriguez", address: "Barcelona, Spain", image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200", rating: 5, review: "I've used many booking platforms before, but none compare to the personalized experience and attention to detail that QuickStay provides." },
     { id: 2, name: "Liam Johnson", address: "New York, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" },
     { id: 3, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" }
 ];
 
 // Facility Icon
-export const facilityIcons = {
+export const facilityIcons: FacilityIconType = {
     "Free WiFi": assets.freeWifiIcon,
     "Free Breakfast": assets.freeBreakfastIcon,
     "Room Service": assets.roomServiceIcon,
@@ -105,7 +106,7 @@ export const facilityIcons = {
 };
 
 // For Room Details Page
-export const roomCommonData = [
+export const roomCommonData: RoomCommonDataType[] = [
     { icon: assets.homeIcon, title: "Clean & Safe Stay", description: "A well-maintained and hygienic space just for you." },
     { icon: assets.badgeIcon, title: "Enhanced Cleaning", description: "This host follows Staybnb's strict cleaning standards." },
     { icon: assets.locationFilledIcon, title: "Excellent Location", description: "90% of guests rated the location 5 stars." },
@@ -113,7 +114,7 @@ export const roomCommonData = [
 ];
 
 // User Dummy Data
-export const userDummyData = {
+export const userDummyData: UserDummyDataType = {
     "_id": "user_2unqyL4diJFP1E3pIBnasc7w8hP",
     "username": "Great Stack",
     "email": "user.greatstack@gmail.com",
@@ -128,7 +129,7 @@ export const userDummyData = {
 }
 
 // Hotel Dummy Data
-export const hotelDummyData = {
+export const hotelDummyData: HotelDummyDataType = {
     "_id": "67f76393197ac559e4089b72",
     "name": "Urbanza Suites",
     "address": "Main Road  123 Street , 23 Colony",
@@ -141,7 +142,7 @@ export const hotelDummyData = {
 }
 
 // Rooms Dummy Data
-export const roomsDummyData = [
+export const roomsDummyData: RoomsDummyDataType[] = [
     {
         "_id": "67f7647c197ac559e4089b96",
         "hotel": hotelDummyData,
@@ -195,7 +196,7 @@ export const roomsDummyData = [
 
 
 // User Bookings Dummy Data
-export const userBookingsDummyData = [
+export const userBookingsDummyData: UserBookingDummyDataType[] = [
     {
         "_id": "67f76839994a731e97d3b8ce",
         "user": userDummyData,
