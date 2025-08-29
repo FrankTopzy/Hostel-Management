@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import { useLocation } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isOwnerPage: boolean = useLocation().pathname.includes('owner');
 
   return (
-    <>
-      <Navbar/>
-    </>
+    <div className='min-h-[200vh]'>
+      {!isOwnerPage && <Navbar/>}
+    </div>
   )
 }
 
