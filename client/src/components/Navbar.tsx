@@ -4,9 +4,9 @@ import { assets } from '../assets/assets';
 const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Products', path: '/' },
-        { name: 'Contact', path: '/' },
-        { name: 'About', path: '/' },
+        { name: 'Hotels', path: '/hotels' },
+        { name: 'Experiences', path: '/experiences' },
+        { name: 'About', path: '/about' },
     ];
 
     //const ref: RefObject<HTMLDivElement | null> = React.useRef(null)
@@ -24,7 +24,7 @@ const Navbar = () => {
     }, []);
 
     return (
-      <nav className={`fixed top-0 left-0 bg-indigo-500 w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4" : "py-4 md:py-6"}`}>
+      <nav className={`fixed top-0 left-0 bg-transparent w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4" : "py-4 md:py-6"}`}>
 
         {/* Logo */}
         <a href="https://prebuiltui.com" className="flex items-center gap-2">
@@ -40,7 +40,7 @@ const Navbar = () => {
                 </a>
             ))}
             <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`}>
-                New Launch
+                Dashboard
             </button>
         </div>
 
