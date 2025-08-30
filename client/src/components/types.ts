@@ -83,3 +83,15 @@ export type UserBookingDummyDataType = {
   updatedAt: string;
   __v: number;
 }
+
+export type HotelCardType = {
+  room: RoomsDummyDataType;
+  index: number
+}
+
+export type TitleType = {
+  title: string;
+  subTitle: string;
+  align: string;
+  font: string;
+}
