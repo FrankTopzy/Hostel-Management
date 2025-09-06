@@ -95,3 +95,9 @@ export type TitleType = {
   align: string;
   font: string;
 }
+
+export type CheckBoxType = {
+  label: string;
+  selected: boolean;
+  onChange?: (label: string, event?: boolean, ) => void;
+}
