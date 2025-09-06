@@ -1,4 +1,4 @@
-import React, { useEffect, type RefObject } from 'react';
+import React, { useEffect } from 'react';
 import { assets } from '../assets/assets';
 import { useClerk, useUser, UserButton } from '@clerk/clerk-react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -78,7 +78,7 @@ const Navbar = () => {
                     </UserButton.MenuItems>
                 </UserButton>
             ) : (
-                <button onClick={openSignIn} className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black"}`}>
+                <button onClick={() => openSignIn()} className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black"}`}>
                     Login
                 </button>
             )}
@@ -123,7 +123,7 @@ const Navbar = () => {
             )}
 
             {!user && (
-                <button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
+                <button onClick={() => openSignIn()} className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
                     Login
                 </button>
             )}
