@@ -9,7 +9,6 @@ function ExclusiveOffers() {
         <Title 
           title='Exclusive Offers'
           subTitle='Take advantage of our limited-time offers and special packages to enhance your stay and create unforgettable memories.'
-          font=''
           align='left'
         />
 

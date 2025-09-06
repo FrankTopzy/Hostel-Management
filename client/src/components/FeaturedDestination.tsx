@@ -12,8 +12,6 @@ function FeaturedDestination() {
       <Title
         title='Featured Destination'
         subTitle='Discover our handpicked selection of exceptional properties around the world, offering unparalleled luxury and unforgettable experiences.'
-        align=''
-        font=''
       />
 
       <div className='flex gap-6 mt-20 flex-wrap items-center justify-center'>
