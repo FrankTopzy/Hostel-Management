@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import type { HotelCardType } from './types'
 import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
