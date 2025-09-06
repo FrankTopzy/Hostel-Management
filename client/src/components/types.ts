@@ -92,8 +92,8 @@ export type HotelCardType = {
 export type TitleType = {
   title: string;
   subTitle: string;
-  align: string;
-  font: string;
+  align?: string;
+  font?: string;
 }
 
 export type CheckBoxType = {
