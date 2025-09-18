@@ -86,7 +86,7 @@ export type UserBookingDummyDataType = {
 
 export type HotelCardType = {
   room: RoomsDummyDataType;
-  index: number
+  index: number;
 }
 
 export type TitleType = {
