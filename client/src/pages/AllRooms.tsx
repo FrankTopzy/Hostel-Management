@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { assets, facilityIcons, roomsDummyData } from '../assets/assets'
 import StarRating from '../components/StarRating'
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +14,7 @@ const CheckBox = ({label, selected = false, onChange = () => { }} : CheckBoxType
   )
 }
 
-const Radio = ({label, selected = false, onChange = () => {}} : CheckBoxType) => {
+const RadioButton = ({label, selected = false, onChange = () => {}} : CheckBoxType) => {
   return (
     <label className='flex gap-3 items-center cursor-pointer mt-2 text-sm'>
       <input type="radio" name='sortOption' checked={selected} onChange={() => onChange(label)}/>
@@ -94,7 +94,7 @@ function AllRooms() {
           <p className='text-base font-medium text-gray-800'>Filters</p>
 
           <div className='text-xs cursor-pointer'>
-            <button className='lg:hidden' onClick={() => setOpenFilters(!openFilters)}>{openFilters ? 'SHOW' : 'HIDE'}</button>
+            <button className='lg:hidden' onClick={() => setOpenFilters(!openFilters)}>{openFilters ? 'HIDE' : 'SHOW'}</button>
 
             <button className='hidden lg:block'>CLEAR</button>
           </div>
@@ -114,6 +114,14 @@ function AllRooms() {
 
             {priceRanges.map((range, index) => (
               <CheckBox key={index} label={`$ ${range}`} selected = {false} />
+            ))}
+          </div>
+
+          <div className='px-5 pt-5 pb-7'>
+            <p className='font-medium text-gray-800 pb-2'>Price Range</p>
+
+            {sortOptions.map((option, index) => (
+              <RadioButton key={index} label={option} selected={false}/>
             ))}
           </div>
         </div>
