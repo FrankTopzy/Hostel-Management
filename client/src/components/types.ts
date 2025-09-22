@@ -101,3 +101,15 @@ export type CheckBoxType = {
   selected: boolean;
   onChange?: (label: string, event?: boolean, ) => void;
 }
+
+export type SidebarLinkType = {
+  name: string;
+  path: string;
+  icon: string;
+}
+ 
+export type DashboardDummyDataType = {
+  totalBookings: number;
+  totalRevenue: number;
+  bookings: UserBookingDummyDataType[];
+}
