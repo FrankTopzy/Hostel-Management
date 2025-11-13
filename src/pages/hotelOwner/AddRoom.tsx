@@ -1,4 +1,4 @@
-import React, { useState, type JSX } from 'react'
+import { useState } from 'react'
 import Title from '../../components/Title'
 import { assets } from '../../assets/assets';
 
@@ -23,9 +23,9 @@ type Inputs = {
   amenities: Amenities;
 }
 
-interface Image {
+/*interface Image {
   [key: string]: string; // or whatever type your images are
-}
+}*/
 
 
 function AddRoom() {

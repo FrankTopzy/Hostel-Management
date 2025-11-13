@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { roomsDummyData } from '../../assets/assets'
 import type { RoomsDummyDataType } from '../../components/types'
 import Title from '../../components/Title'
 
 function ListRoom() {
-  const [rooms, setRooms] = useState<RoomsDummyDataType[]>(roomsDummyData)
+  const [rooms, setRooms] = useState<RoomsDummyDataType[]>([]);
+
+  useEffect(() => {
+    // Fetch rooms data from API and update state
+    // For now, using dummy data
+    setRooms(roomsDummyData);
+  }, []);
 
   return (
     <div>

@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Title from '../../components/Title'
 import { assets, dashboardDummyData } from '../../assets/assets'
 import type { DashboardDummyDataType } from '../../components/types'
 
 function Dashboard() {
-  const [dashboardData, setDashboardData] = useState<DashboardDummyDataType>(dashboardDummyData)
+  const [dashboardData, setDashboardData] = useState<DashboardDummyDataType>();
+
+  useEffect(() => {
+    // Fetch dashboard data from API and update state
+    // For now, using dummy data
+    setDashboardData(dashboardDummyData);
+  }, []);
 
   return (
     <div>
@@ -17,7 +23,7 @@ function Dashboard() {
 
           <div className='flex flex-col sm:ml-4 font-medium'>
             <p className='text-blue-500 text-lg'>Total Bookings</p>
-            <p className='text-neutral-400 texr-base'>{dashboardData.totalBookings}</p>
+            <p className='text-neutral-400 texr-base'>{ dashboardData && dashboardData.totalBookings}</p>
           </div>
         </div>
 
@@ -27,7 +33,7 @@ function Dashboard() {
 
           <div className='flex flex-col sm:ml-4 font-medium'>
             <p className='text-blue-500 text-lg'>Total Revenue</p>
-            <p className='text-neutral-400 texr-base'>$ {dashboardData.totalRevenue}</p>
+            <p className='text-neutral-400 texr-base'>$ { dashboardData && dashboardData.totalRevenue}</p>
           </div>
         </div>
       </div>
@@ -47,7 +53,7 @@ function Dashboard() {
           </thead>
 
           <tbody>
-            {dashboardData.bookings.map((item, index) => (
+            {dashboardData && dashboardData.bookings.map((item, index) => (
               <tr key={index}>
                 <td className='py-3 px-3 text-gray-700 border-t border-gray-300'>
                   {item.user.username}

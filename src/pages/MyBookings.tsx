@@ -1,11 +1,18 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { assets, userBookingsDummyData } from "../assets/assets"
 import Title from "../components/Title"
 import type { UserBookingDummyDataType } from "../components/types"
 
 
 function MyBookings() {
-  const [bookings, setBookings] = useState<UserBookingDummyDataType[]>(userBookingsDummyData)
+  const [bookings, setBookings] = useState<UserBookingDummyDataType[]>([]);
+
+  useEffect(() => {
+    // Fetch user bookings from API and update state
+    // For now, using dummy data
+    setBookings(userBookingsDummyData);
+  }, []);
+
   return (
     <div className="py-28 md:pb-35 md:pt-32 px-4 md:px-16 lg:px-24 xl:px-32">
       <Title title='My Bookings' subTitle="EAsily manage your past, current, and upcoming hotel resevations in one place. Plan your trips seamlessly with just a few clicks" align="left" />

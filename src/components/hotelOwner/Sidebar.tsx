@@ -1,4 +1,3 @@
-import React from 'react'
 import { assets } from '../../assets/assets'
 import type { SidebarLinkType } from '../types'
 import { NavLink } from 'react-router-dom'
